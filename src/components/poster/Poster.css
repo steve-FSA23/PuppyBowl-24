@@ -1,0 +1,57 @@
+.poster__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    margin: 4rem auto;
+}
+
+.puppy__img__container {
+    margin: auto;
+    padding: 3rem;
+}
+
+.puppy__img {
+    width: 450px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.puppy__text__container {
+    width: 50%;
+    text-align: center;
+}
+
+.puppy__text__container h2 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+}
+
+.puppy__text__container p {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .poster__container {
+        flex-direction: column;
+    }
+    .puppy__img__container {
+        padding: 0;
+        margin: 0;
+    }
+    .puppy__img {
+        width: 350px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .puppy__text__container {
+        width: 85%;
+        padding: 0;
+        margin: 2rem;
+        text-align: center;
+    }
+}
