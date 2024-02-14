@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchSinglePlayer } from "../../API";
 
+import "./SinglePlayer.css";
+
 const SinglePlayer = () => {
     const { id } = useParams();
 
@@ -20,10 +22,12 @@ const SinglePlayer = () => {
         navigate("/");
     };
     return (
-        <div>
-            <h2>Single Player</h2>
+        <div className="single-player-container">
+            <div className="single-player-header">
+                <h2>Single Player</h2>
+            </div>
             {player ? (
-                <div>
+                <div className="player-details">
                     <h3>{player.name}</h3>
                     <p>Breed: {player.breed}</p>
                     <p>CohortId: {player.cohortId}</p>
@@ -33,7 +37,9 @@ const SinglePlayer = () => {
             ) : (
                 <p>Loading player data...</p>
             )}
-            <button onClick={handleButtonClick}>Back to All Players</button>
+            <button className="back-button" onClick={handleButtonClick}>
+                Back to All Players
+            </button>
         </div>
     );
 };
